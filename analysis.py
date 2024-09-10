@@ -1,6 +1,8 @@
+# importing packages
 import pandas as pd
 import numpy as np
 
+# reading the data
 df = pd.read_csv(
     "https://media.githubusercontent.com/media/nickeubank/MIDS_Data/master/World_Development_Indicators/wdi_small_tidy_2015.csv"
 )
@@ -13,10 +15,12 @@ df = df[columns]
 
 df["Log GDP Per Capita"] = np.log(df["GDP per capita (constant 2010 US$)"])
 
+# importing more packages
 import seaborn.objects as so
 import seaborn as sns
 from matplotlib import style
 
+# plotting the graph
 my_chart = (
     so.Plot(
         df, x="Log GDP Per Capita", y="Mortality rate, under-5 (per 1,000 live births)"
