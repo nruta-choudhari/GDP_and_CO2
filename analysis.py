@@ -33,3 +33,5 @@ my_chart = (
 sns.set_theme(style="whitegrid")
 
 my_chart.show()
+
+# this was a successful team assignment
